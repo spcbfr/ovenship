@@ -1,12 +1,28 @@
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/BaseLayout.astro"
+import profilePic from "../assets/profile-pic.webp"
+---
+<Layout>
+      <section class="flex gap-x-4">
+        <Image
+          src={profilePic}
+          width="80"
+          height={80}
+          quality="100"
+          alt=""
+          class="rounded-full  relative bottom-[10px]"
+        />
+        <div class="font-display">
+          <h2 class="text-2xl font-black text-stone-800 sm:text-3xl font-display">
+            Yusuf Bouzekri
+          </h2>
+          <p class="text-stone-700 sm:text-lg ">
+            Full Time Geek / CS Student
+          </p>
+        </div>
+      </section>
+      <div class="flex flex-col gap-3 sm:gap-7">
+		<!-- Articles go here -->
+	  </div>
+</Layout>

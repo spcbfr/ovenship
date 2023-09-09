@@ -1,0 +1,23 @@
+---
+type Props = {
+    title: string
+}
+const { title } = Astro.props
+---
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="a Thingy by Yusuf Bouzekri">
+  <meta name="author" content="Yusuf Bouzekri">
+  <meta name="publisher" content="Bouzekri inc.">
+  <link rel="icon" type="image/x-icon" href="/favicon.svg">
+  <meta name="description" content="A personal blog about tech, life and movies">
+  <meta name="theme-color" content="#FAFAF9">
+  <meta name="category" content="Technology">
+  <meta name="keywords" content="Next.js, Programming, Web development, Productivity, Movies, TV Shows">
+  <link rel="canonical" href="https://yusuf.fyi">
+  <meta name="format-detection" content="email=no, address=no, telephone=yes">
+  <meta name="google-site-verification" content="google">
+  <meta name="generator" content="Next.js">
+  <title>{title} | Yusuf Bouzekri </title> 
+</head>
