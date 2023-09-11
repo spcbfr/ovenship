@@ -1,0 +1,13 @@
+---
+  type Props = {
+    inputDate: Date,
+    style: string,
+  }
+  const { inputDate, style } = Astro.props
+  const month = inputDate.toLocaleString('en-US', { month: 'short' });
+  const day = inputDate.getDay()
+---
+
+<time datetime={inputDate.toString()} class={style} >
+    {`${day} ${month}`}
+</time>
