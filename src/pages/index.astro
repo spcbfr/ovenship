@@ -4,8 +4,12 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/BaseLayout.astro"
 import profilePic from "../assets/profile-pic.webp"
 import FormatDate from "../components/FormatDate.astro";
+import DonationCard from "../components/DonationCard.astro";
 
-const posts = await getCollection("posts")
+const unsortedPosts = await getCollection("posts")
+const posts = unsortedPosts.sort((prev, curr) => {
+    return  curr.data.date.valueOf() - prev.data.date.valueOf() ;
+})
 ---
 <Layout tabName="Home">
       <section class="flex gap-x-4">
